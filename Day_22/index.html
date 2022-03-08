@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 22_ projects</title>
+</head>
+<body>
+ <script>
+  function isPrimeNo(x){
+    if (x === 0 || x === 1) return false
+     for(i = x - 1; i > 1; i--) {
+        if (x % i ===0) return false
+  }
+        return true
+  } 
+
+  // function isEven(x){
+//     for ( x = i + 1; i > 1; i--){
+//       if (x % i === 0){
+//         return true
+//       }
+
+//   }
+// }
+
+  const colors = {
+      red: '#fd5e53',
+      yellow: '#fddb3a',
+      green: '#21bf73'
+  }
+
+const bodyEl = document.querySelector('body')
+
+
+
+const containerEl = document.createElement('div')
+containerEl.setAttribute('id', 'container')
+containerEl.style.display = 'grid'
+containerEl.style.gridTemplateColumns = 'repeat(6, 1fr)'
+containerEl.style.width = '40rem'
+// containerEl.style.height = '18rem'
+  containerEl.style.margin = '0 auto'
+  containerEl.style.marginTop= '1rem'
+
+
+const headerEl = document.createElement('header')
+headerEl.style.textAlign = 'center'
+bodyEl.appendChild(headerEl)
+
+const p1El = document.createElement('p')
+p1El.textContent = 'Number Generator'
+p1El.style.fontWeight = 'bold'
+p1El.style.fontSize = '3rem'
+p1El.style.margin = '0'
+
+headerEl.appendChild(p1El)
+
+
+const p2El = document.createElement('p')
+p2El.textContent = '30DaysOfJavascriptDOM Day2'
+p2El.style.textDecoration = 'underline'
+p2El.style.fontSize = '1.5rem'
+p2El.style.margin = '0'
+headerEl.appendChild(p2El)
+
+const p3El = document.createElement('p')
+p3El.textContent = 'Author, Asabeneh Yetayeh'
+p3El.style.textDecoration = 'underline'
+p3El.style.fontSize = '15px'
+p3El.style.margin = '0'
+headerEl.appendChild(p3El)
+
+
+Array.from(Array(102).keys()).forEach(num => {
+  const numEl = document.createElement('div')
+  numEl.textContent = num
+  numEl.style.height = '3rem'
+  numEl.style.display = 'grid'
+  numEl.style.placeItems = 'center'
+  // numEl.style.margin = '0 auto'
+
+  
+  //numEl.style.height = '50px'
+  numEl.style.color = 'white'
+  numEl.style.fontSize = '2rem'
+  numEl.style.fontWeight = 'bold'
+  numEl.style.border = ' 2px solid white'
+  containerEl.appendChild(numEl)
+  numEl.style.backgroundColor =
+  
+   isPrimeNo(num) ? 'yellow' : num % 2 ? 'red' : 'green' 
+//   if (isPrimeNo(num))  'yellow'
+//    else if (num % 2) {
+//    'green'
+//  else {
+//     'red'
+//   }
+
+  bodyEl.appendChild(containerEl) 
+})
+ </script>
+</body>
+</html>

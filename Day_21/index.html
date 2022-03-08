@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Document Object Model</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+ <p class="paragraph" id="first-paragraph">first-paragraph</p>
+ <p class="paragraph"  id="second-paragraph">second-paragraph</p>
+ <p class="paragraph" id="third-paragraph">third-paragraph</p>
+ <p class="paragraph" id="fourth-paragraph">fourth-paragraph</p>
+<script> 
+//  level 2 exercise 1 
+//  const paragraphs = document.querySelector('p')
+//  console.log(paragraphs.length);
+ //exercise 2
+//  const paragraphs = docoment.querySelector('#first-paragraph')
+//  const paragraphs = docoment.querySelector('#second-paragraph')
+//  const paragraphs = docoment.querySelector('#third-paragraph')
+//  const paragraphs = docoment.querySelector('#fourth-paragraph')
+
+ //exercise 3
+//  const paragraphs = document.querySelectorAll('p')
+
+// for (let i = 0; i <= paragraphs.length; i++){
+// console.log(paragraphs[i])
+// }
+
+//  //exercise 4
+// paragraphs[0].textContent = 'First Paragraph'
+// paragraphs[1].textContent = 'Second Paragraph'
+// paragraphs[2].textContent = 'Third Paragraph'
+// paragraphs[3].textContent = 'Fourth Paragraph'
+
+// //exercise 5
+// paragraphs[0].class = 'black'
+// paragraphs[1].id = 'para'
+// paragraphs[2].setAttribute = ('id', 'blue')
+// paragraphs[3].setAttribute = ('class', 'param')
+
+//level 2
+//exercise 1
+document.querySelector('body').style.backgroundColor = 'blue'
+const paragraphs = document.querySelectorAll('p')
+// paragraphs.forEach((paragraphs, i) => {
+//   paragraphs.style.fontSize = '24px' 
+//   paragraphs.style.fontFamily = 'monospace'
+//     paragraphs.style.color = 'red'
+//     paragraphs.style.border = '5px'
+// })
+paragraphs.forEach((paragraphs, i) => {
+  if(i % 2 === 1){
+    paragraphs.style.color = 'red'
+  }
+  else {
+    paragraphs.style.color = 'green'
+  }
+})
+paragraphs.forEach((paragraphs, i) => {
+  paragraphs.setAtribute('id', 'title')
+  paragraphs.setAtribute('class', 'red')
+})
+
+
+
+</script>
+</body>
+</html> -->
+
+
+<!-- level 3 -->
+<!-- <html>
+  <head>
+    <title>30DaysOfJavaScript:21 Day</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Asabeneh Yetayeh challenges in 2020</h1>
+        <h2>30DaysOfJavaScript Challenge</h2>
+        </header>
+        <ul>
+            <li>30DaysOfPython Challenge Done</li>
+            <li>30DaysOfJavaScript Challenge Ongoing</li>
+            <li>30DaysOfReact Challenge Coming</li>
+            <li>30DaysOfFullStack Challenge Coming</li>
+            <li>30DaysOfDataAnalysis Challenge Coming</li>
+            <li>30DaysOfReactNative Challenge Coming</li>
+            <li>30DaysOfMachineLearning Challenge Coming</li>
+        </ul>
+    </div>
+
+    
+    <script>
+      //utilities
+      const randomNo = (max = 255, min = 1) => Math.round(Math.random() * (max - min) + min)
+
+      //selectors
+      const bodyEl = document.querySelector('body')
+      const wrapperEl = document.querySelector('.wrapper')
+      const h1El = document.querySelector('h1')
+      h1El.innerHTML = h1El.textContent.replace(/\d+/, '').trim() + `<span id="year">${new Date().getFullYear()}</span>`
+      const headerEl = document.querySelector('header')
+      headerEl.innerHTML += '<p><span id="time"> June 15, 2021 2:43:45 </span></p>'
+      const timeEl = document.querySelector('#time')
+      const taskEls = document.querySelectorAll('li')
+
+
+//styling
+      bodyEl.style.fontFamily = 'Avenir, Segoe ui, ubuntu, Sans-serif'
+     wrapperEl.style.maxWidth = '40rem'
+      wrapperEl.style.margin = 'auto'
+      headerEl.style.textAlign = 'center'
+      h1El.style.marginBottom = '-1rem'
+      document.getElementById('year').style.fontSize = '4rem'
+      document.getElementById('time').style.padding = '0.25 1.5'
+      taskEls.forEach(taskEl => {
+        const taskText = taskEl.textContent
+        taskEl.style.listStyleType = 'none'
+        taskEl.style.padding = '1rem 2rem'
+        taskEl.style.marginBottom = '2px'
+        // taskEl.style.backgroundColor = taskText.includes('Done')
+        //   ? 'green'
+        //   : taskText.includes('Ongoing') ? 'yellow' : 'red'
+        let color = null
+        if (taskText.includes('Done')) {
+          color = 'green' 
+        } else if (taskText.includes('Ongoing')) {
+          color = 'yellow'
+        } else {
+          color = 'red'
+        }
+        taskEl.style.backgroundColor = color
+      })
+       
+    setInterval(() => {
+   document.getElementById('year').style.color = `rgb(${randomNo()}, ${randomNo()}, ${randomNo()})`
+   timeEl.style.backgroundColor = `rgb(${randomNo()},${randomNo()}, ${randomNo()})`
+      },1000)
+    </script>
+  </body>
+</html> -->
